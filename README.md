@@ -1,6 +1,8 @@
 ## Space-Shooter-Game
 OpenGL Space Shooter Game in C++
 
+![spaceshooter_AdobeExpress](https://user-images.githubusercontent.com/110789514/216853127-afb3bd9a-f72f-44e1-8d86-89718bf26ca4.gif)
+
 ## References 
 
 DeVries, J. (n.d.). LearnOpenGL/LICENSE.md at master · JoeyDeVries/LearnOpenGL. GitHub. https://github.com/JoeyDeVries/LearnOpenGL/blob/master/LICENSE.md
