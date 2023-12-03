@@ -52,7 +52,8 @@ Game::~Game()
 
 void Game::Init()
 {
-    SoundEngine->play2D(FileSystem::getPath("LosingControl.mp3").c_str(), true);
+    SoundEngine->play2D("LosingControl.mp3", true);
+
 
 
     ResourceManager::LoadShader("sprite.vs", "sprite.fs", nullptr, "sprite");
@@ -65,18 +66,19 @@ void Game::Init()
     ResourceManager::GetShader("particle").Use().SetInteger("sprite", 0);
     ResourceManager::GetShader("particle").SetMatrix4("projection", projection);
     // load textures
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/AdobeStock_408749277.jpg").c_str(), false, "background");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/1.png").c_str(), true, "background1");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/awesomeface2.png").c_str(), true, "face");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/2.png").c_str(), true, "bakcground2");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/hearts.png").c_str(), true, "hearts");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/hearts2.png").c_str(), true, "hearts2");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/hearts3.png").c_str(), true, "hearts3");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/space3.png").c_str(), true, "spaceship");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/empty.png").c_str(), true, "empty");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/paddle.png").c_str(), true, "paddle");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/particle.png").c_str(), true, "particle");
-    ResourceManager::LoadTexture(FileSystem::getPath("resources/textures/powerup_speed2.png").c_str(), true, "powerup_speed");
+    ResourceManager::LoadTexture("resources/textures/AdobeStock_408749277.jpg", false, "background");
+    ResourceManager::LoadTexture("resources/textures/1.png", true, "background1");
+    ResourceManager::LoadTexture("resources/textures/awesomeface2.png", true, "face");
+    ResourceManager::LoadTexture("resources/textures/2.png", true, "background2");
+    ResourceManager::LoadTexture("resources/textures/hearts.png", true, "hearts");
+    ResourceManager::LoadTexture("resources/textures/hearts2.png", true, "hearts2");
+    ResourceManager::LoadTexture("resources/textures/hearts3.png", true, "hearts3");
+    ResourceManager::LoadTexture("resources/textures/space3.png", true, "spaceship");
+    ResourceManager::LoadTexture("resources/textures/empty.png", true, "empty");
+    ResourceManager::LoadTexture("resources/textures/paddle.png", true, "paddle");
+    ResourceManager::LoadTexture("resources/textures/particle.png", true, "particle");
+    ResourceManager::LoadTexture("resources/textures/powerup_speed2.png", true, "powerup_speed");
+
 
     // set render-specific controls
     Renderer = new SpriteRenderer(ResourceManager::GetShader("sprite"));
@@ -233,6 +235,13 @@ void Game::ProcessInput(float dt)
                 Player->Position.x += velocity;
             }
         }
+        if (this->Keys[GLFW_KEY_D])
+        {
+            if (Player->Position.x <= this->Width - Player->Size.x)
+            {
+                Player->Position.x += velocity;
+            }
+        }
         if (this->Keys[GLFW_KEY_UP])
         {
             if (Player->Position.y >= 0.0f)
@@ -240,7 +249,21 @@ void Game::ProcessInput(float dt)
                 Player->Position.y -= velocity;
             }
         }
+        if (this->Keys[GLFW_KEY_W])
+        {
+            if (Player->Position.x <= this->Width - Player->Size.x)
+            {
+                Player->Position.x += velocity;
+            }
+        }
         if (this->Keys[GLFW_KEY_DOWN])
+        {
+            if (Player->Position.y <= this->Height - Player->Size.y)
+            {
+                Player->Position.y += velocity;
+            }
+        }
+        if (this->Keys[GLFW_KEY_S])
         {
             if (Player->Position.y <= this->Height - Player->Size.y)
             {
@@ -281,7 +304,7 @@ void Game::Render()
     if (this->State == GAME_MENU)
     {
         Text->RenderText("Press ENTER to start", this->Width / 2.0f - 200.0f, this->Height / 2.0f, 1.0f);
-        Text->RenderText("Press W or S to select level", this->Width / 2.0f - 210.0f, this->Height / 2.0f + 20.0f, 0.75f);
+        Text->RenderText("Press UP or DOWN to select level", this->Width / 2.0f - 225.0f, this->Height / 2.0f + 20.0f, 0.75f);
 
     }
     if (this->State == GAME_ATTACK)
