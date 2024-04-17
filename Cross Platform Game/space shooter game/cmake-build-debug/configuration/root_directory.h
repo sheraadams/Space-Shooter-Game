@@ -1,1 +1,1 @@
-const char * logl_root = "/Users/s.adams/Game/space shooter cmake copy 2";
+const char * logl_root = "/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game";

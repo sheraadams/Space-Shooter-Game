@@ -1,6 +1,5 @@
-/Users/s.adams/Game/space shooter cmake copy 2/cmake-build-debug/CMakeFiles/STB_IMAGE.dir
-/Users/s.adams/Game/space shooter cmake copy 2/cmake-build-debug/CMakeFiles/GLAD.dir
-/Users/s.adams/Game/space shooter cmake copy 2/cmake-build-debug/CMakeFiles/IMGUI.dir
-/Users/s.adams/Game/space shooter cmake copy 2/cmake-build-debug/CMakeFiles/sa__game.dir
-/Users/s.adams/Game/space shooter cmake copy 2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/s.adams/Game/space shooter cmake copy 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/cmake-build-debug/CMakeFiles/STB_IMAGE.dir
+/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/cmake-build-debug/CMakeFiles/GLAD.dir
+/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/cmake-build-debug/CMakeFiles/sa__game.dir
+/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/cmake-build-debug/CMakeFiles/rebuild_cache.dir

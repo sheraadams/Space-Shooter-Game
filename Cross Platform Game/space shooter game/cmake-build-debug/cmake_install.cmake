@@ -1,4 +1,4 @@
-# Install script for directory: /Users/s.adams/Game/space shooter cmake copy 2
+# Install script for directory: /Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/s.adams/Game/space shooter cmake copy 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
