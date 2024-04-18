@@ -163,23 +163,7 @@ void Game::Update(float dt)
 
 void Game::ProcessInput(float dt)
 {
-
     float velocity = PLAYER_VELOCITY/5 * dt;
-
-    /*  FIXME
-        for (GameObject& box : this->Levels[this->Level].Bricks)
-    {
-        box.Position.y += velocity * RandomInt();
-        if (box.Position.y >= 1000)
-        {
-            velocity = -velocity;
-        }
-        else if (box.Position.y <=100)
-        {
-            velocity = -velocity;
-        }
-    }
-    */
 
     if (this->State == GAME_MENU)
     {
