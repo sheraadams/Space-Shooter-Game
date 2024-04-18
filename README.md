@@ -1,5 +1,7 @@
 # OpenGL Space Shooter Game
 
+See the code walk-through on [YouTube](https://youtu.be/ZqfGpTG0-Pc).
+
 ## About the Project
 This is a Space Shooter Game programmed in C++ using OpenGL and GLFW libraries. The goal is to take out the spaceships without taking damage. Each hit removes one heart from your life pool. 
 
