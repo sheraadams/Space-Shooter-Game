@@ -61,8 +61,6 @@ void Game::Init()
     SoundEngine->play2D("LosingControl.mp3", true);
 #endif
 
-
-
     ResourceManager::LoadShader("sprite.vs", "sprite.fs", nullptr, "sprite");
     ResourceManager::LoadShader("particle.vs", "particle.fs", nullptr, "particle");
     ResourceManager::LoadShader("post_processing.vs", "post_processing.fs", nullptr, "postprocessing");
@@ -258,9 +256,9 @@ void Game::ProcessInput(float dt)
         }
         if (this->Keys[GLFW_KEY_W])
         {
-            if (Player->Position.x <= this->Width - Player->Size.x)
+            if (Player->Position.y >= 0.0f)
             {
-                Player->Position.x += velocity;
+                Player->Position.y -= velocity;
             }
         }
         if (this->Keys[GLFW_KEY_DOWN])

@@ -1,26 +1,30 @@
 # ninja log v5
 523	791	1713390608501016919	CMakeFiles/sa__game.dir/src/sa/game/texture.cpp.o	95f35432f9715355
 5	98	1713390607809265455	CMakeFiles/GLAD.dir/src/glad.c.o	8f0802aa8792f47a
+5	665	1713390608372969953	CMakeFiles/sa__game.dir/src/sa/game/game_level.cpp.o	3d47eb20c485819c
+394	754	1713390608464029672	CMakeFiles/sa__game.dir/src/sa/game/sprite_renderer.cpp.o	fd654bfdd295fa06
 7	487	1713390608195045645	CMakeFiles/sa__game.dir/src/sa/game/post_processor.cpp.o	b5b9aa7a7dadd536
+363	501	7244324880000000	GLAD.lib	16b630ea9f75b32f
+0	68	1713443128608701901	build.ninja	e75a5a3ef7781655
+0	5	0	clean	ad90e366ad70d77b
 392	792	1713390608501646461	CMakeFiles/sa__game.dir/src/sa/game/shader.cpp.o	a243f2f5d6831252
 6	473	1713390608182161131	CMakeFiles/sa__game.dir/src/sa/game/objects.cpp.o	e51b2eeefd605d4a
-0	68	1713391112067065672	build.ninja	e75a5a3ef7781655
-363	501	7244324880000000	GLAD.lib	16b630ea9f75b32f
-0	5	0	clean	ad90e366ad70d77b
+474	633	1713390608343458131	CMakeFiles/sa__game.dir/src/sa/game/stb_image.cpp.o	12a210f02dbfb05
+5	392	1713390608098849296	CMakeFiles/sa__game.dir/src/sa/game/game_object.cpp.o	b5a01cb50a2b51fd
 99	124	1713390607836746000	libGLAD.a	9fcbbfa0f9b53fd0
 374	527	7244324880000000	STB_IMAGE.lib	4f81ecf27b4c86c5
-5	392	1713390608098849296	CMakeFiles/sa__game.dir/src/sa/game/game_object.cpp.o	b5a01cb50a2b51fd
-474	633	1713390608343458131	CMakeFiles/sa__game.dir/src/sa/game/stb_image.cpp.o	12a210f02dbfb05
 4	159	1713390819452724448	/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/bin/sa/sa__game	919bcb91815f1e3c
-487	945	1713390608654726952	CMakeFiles/sa__game.dir/src/sa/game/text_renderer.cpp.o	c293afdffef978b8
 5	394	1713390608101992924	CMakeFiles/sa__game.dir/src/sa/game/ball_object.cpp.o	c7bd96f18c9e53a5
+487	945	1713390608654726952	CMakeFiles/sa__game.dir/src/sa/game/text_renderer.cpp.o	c293afdffef978b8
 5	717	1713390608426123550	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	a0570f6fded37869
 234	806	1713390608515512725	CMakeFiles/sa__game.dir/src/sa/game/resource_manager.cpp.o	ce706bcba96333f7
 205	234	1713390607946883000	libSTB_IMAGE.a	487b5a6d3c68d358
 6	523	1713390608227991512	CMakeFiles/sa__game.dir/src/sa/game/particle_generator.cpp.o	970f855072cdee06
 124	626	1713390608333325662	CMakeFiles/sa__game.dir/src/sa/game/program.cpp.o	cf56a539d7138c8c
-5	665	1713390608372969953	CMakeFiles/sa__game.dir/src/sa/game/game_level.cpp.o	3d47eb20c485819c
-394	754	1713390608464029672	CMakeFiles/sa__game.dir/src/sa/game/sprite_renderer.cpp.o	fd654bfdd295fa06
 584	735	1704652433915887412	/Users/s.adams/Library/Mobile Documents/com~apple~CloudDocs/repos/cmake mac work/imgui/bin/sa/sa__app	f417ca4ab436f71a
 4	205	1713390607915130148	CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o	f599ab228a8ef45a
 1356	1557	1713302999231936822	/Users/s.adams/Library/CloudStorage/OneDrive-Personal/space shooter cmake copy/bin/sa/sa__game	331019c0b084f46d
+19	798	1713448213579086731	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	a0570f6fded37869
+800	1083	1713448213772927182	/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/bin/sa/sa__game	919bcb91815f1e3c
+5	448	1713448691387465189	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	a0570f6fded37869
+450	609	1713448691476741920	/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/bin/sa/sa__game	919bcb91815f1e3c

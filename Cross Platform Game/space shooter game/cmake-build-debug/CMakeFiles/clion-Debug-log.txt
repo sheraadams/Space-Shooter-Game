@@ -21,6 +21,6 @@ CMake Deprecation Warning at CMakeLists.txt:2 (cmake_policy):
 -- Found ASSIMP: /opt/homebrew/lib/libassimp.dylib
 -- Found ASSIMP in /opt/homebrew/include
 -- Found Freetype in /opt/homebrew/include/freetype2
--- Configuring done (0.1s)
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/cmake-build-debug
