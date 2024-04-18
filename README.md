@@ -203,7 +203,7 @@ Here is a Photoshop tutorial where I design the [spaceships and other game asset
 
 ## References 
 
-View my [references including LearnOpenGL.com](https://github.com/sheraadams/Space-Shooter-Game/blob/main/REFERENCES.md) here.
+View my [references including LearnOpenGL.com](https://github.com/sheraadams/Space-Shooter-Game/blob/main/references.md) here.
 
 <div style="text-align: center;">
   <p><strong>Proudly crafted with ❤️ by <a href="https://github.com/sheraadams" target="_blank">Shera Adams</a>.</strong></p>
