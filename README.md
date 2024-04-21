@@ -201,6 +201,21 @@ Collision CheckCollision(BallObject& one, GameObject& two) // AABB - Circle coll
 
 Here is a Photoshop tutorial where I design the [spaceships and other game assets](https://youtu.be/WE-DJ-A5yTY) and here is a tutorial that demonstrates how to [configure your projects in Visual Studio](https://youtu.be/ZFx30Zmo1yI).
 
+## XCode Usage
+
+1. Open a terminal in the project directory and run the code to remove the old build folder and generate a new one with the Xcode project file. 
+
+```bash
+rm -rf build 
+mkdir build
+cd build
+cmake -G Xcode ..
+```
+
+2. Set the working directory in Xcode using Product > Scheme > Edit Scheme > Run Debug > Options > Working Directory > (Check Set Custom) > Project directory/build.
+
+3. Build and run the project.
+
 ## References 
 
 View my [references including LearnOpenGL.com](https://github.com/sheraadams/Space-Shooter-Game/blob/main/references.md) here.
