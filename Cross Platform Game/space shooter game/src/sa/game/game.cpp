@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <sstream>
-#include <iostream>
 #include <learnopengl/filesystem.h>
 #include <irrklang/irrKlang.h>
 using namespace irrklang;
@@ -25,12 +24,13 @@ GameObject* Pause;
 GameObject* Fire;
 GameObject* Background;
 PostProcessor* Effects;
+TextRenderer* Text;
 #ifndef __APPLE__
 ISoundEngine* SoundEngine = createIrrKlangDevice();
 #endif
-TextRenderer* Text;
 
 float ShakeTime = 0.0f;
+
 Game::Game(unsigned int width, unsigned int height)
         : State(GAME_MENU), Keys(), KeysProcessed(), Width(width), Height(height), Level(0), Lives(3), Points()
 {
@@ -38,21 +38,22 @@ Game::Game(unsigned int width, unsigned int height)
 
 Game::~Game()
 {
-    delete Hearts;
-    delete Hearts2;
-    delete Hearts3;
     delete Renderer;
     delete Player;
     delete Ball;
     delete Particles;
+    delete Fruit;
+    delete Hearts;
+    delete Hearts2;
+    delete Hearts3;
+    delete Pause;
+    delete Fire;
     delete Background;
     delete Effects;
-    delete Fire;
     delete Text;
 #ifndef __APPLE__
     SoundEngine->drop();
 #endif
-
 }
 
 void Game::Init()
@@ -70,6 +71,7 @@ void Game::Init()
     ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
     ResourceManager::GetShader("particle").Use().SetInteger("sprite", 0);
     ResourceManager::GetShader("particle").SetMatrix4("projection", projection);
+
     // load textures
     ResourceManager::LoadTexture("resources/textures/AdobeStock_408749277.jpg", false, "background");
     ResourceManager::LoadTexture("resources/textures/1.png", true, "background1");
@@ -83,7 +85,6 @@ void Game::Init()
     ResourceManager::LoadTexture("resources/textures/paddle.png", true, "paddle");
     ResourceManager::LoadTexture("resources/textures/particle.png", true, "particle");
     ResourceManager::LoadTexture("resources/textures/powerup_speed2.png", true, "powerup_speed");
-
 
     // set render-specific controls
     Renderer = new SpriteRenderer(ResourceManager::GetShader("sprite"));
@@ -125,11 +126,6 @@ void Game::Init()
     glm::vec2 heartsPos = glm::vec2(0.0f, 0.0f);
     Hearts = new GameObject(heartsPos, glm::vec2(HEART_SIZE), ResourceManager::GetTexture("hearts"));
 }
-int Game::RandomInt()
-{
-    int randNum = rand() % 5 + 1;
-    return randNum;
-}
 
 void Game::Update(float dt)
 {
@@ -163,8 +159,7 @@ void Game::Update(float dt)
 
 void Game::ProcessInput(float dt)
 {
-    float velocity = PLAYER_VELOCITY/5 * dt;
-
+    float velocity = PLAYER_VELOCITY * dt;
     if (this->State == GAME_MENU)
     {
         if (this->Keys[GLFW_KEY_ENTER] && !this->KeysProcessed[GLFW_KEY_ENTER])
@@ -198,7 +193,6 @@ void Game::ProcessInput(float dt)
     }
     if (this->State == GAME_ACTIVE || this->State == GAME_ATTACK)
     {
-        float velocity = PLAYER_VELOCITY * dt;
         if (this->Keys[GLFW_KEY_SPACE])
         {
             this->State = GAME_ATTACK;
@@ -341,15 +335,6 @@ void Game::ResetPlayer()
     Ball->Color = glm::vec3(1.0f);
 }
 
-void Game::ResetBall()
-{
-
-    Ball->Reset(Player->Position + glm::vec2(PLAYER_SIZE.x / 2.0f - BALL_RADIUS, -(BALL_RADIUS * 2.0f)), INITIAL_BALL_VELOCITY);
-    Ball->Color = glm::vec3(1.0f);
-}
-
-
-
 void Game::UpdatePowerUps(float dt)
 {
     for (PowerUp& powerUp : this->PowerUps)
@@ -476,13 +461,11 @@ void Game::DoCollisions()
 #ifndef __APPLE__
         SoundEngine->play2D("resources/audio/bleep.wav", false);
 #endif
-
     }
 }
 
 bool CheckCollision(GameObject& one, GameObject& two) // AABB - AABB collision
 {
-
     bool collisionX = one.Position.x + one.Size.x >= two.Position.x &&
                       two.Position.x + two.Size.x >= one.Position.x;
     bool collisionY = one.Position.y + one.Size.y >= two.Position.y &&
@@ -492,7 +475,6 @@ bool CheckCollision(GameObject& one, GameObject& two) // AABB - AABB collision
 
 Collision CheckCollision(BallObject& one, GameObject& two) // AABB - Circle collision
 {
-
     glm::vec2 center(one.Position + one.Radius);
     glm::vec2 aabb_half_extents(two.Size.x / 2.0f, two.Size.y / 2.0f);
     glm::vec2 aabb_center(two.Position.x + aabb_half_extents.x, two.Position.y + aabb_half_extents.y);

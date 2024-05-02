@@ -9,7 +9,6 @@
 #include "game_level.h"
 #include "power_up.h"
 
-
 enum GameState {
     GAME_ACTIVE,
     GAME_MENU,
@@ -17,7 +16,6 @@ enum GameState {
     GAME_ATTACK, 
     GAME_LOSE, 
     GAME_HURT
-
 };
 
 
@@ -55,15 +53,11 @@ public:
     Game(unsigned int width, unsigned int height);
     ~Game();
     void Init();
-    void InitializeCoreAudio();
-    void PlayAudioLoopedCoreAudio(const char* audioFilePath);
     void ProcessInput(float dt);
     void Update(float dt);
     void Render();
     void DoCollisions();
     void ResetLevel();
-    void ResetBall();
-    int RandomInt();
     void ResetPlayer();
     void SpawnPowerUps(GameObject& block);
     void UpdatePowerUps(float dt);
