@@ -7,7 +7,7 @@ This is a Space Shooter Game programmed in C++ using OpenGL and GLFW libraries. 
 
 ## Keyboard Controls
 
-The enemy spaceship pattern can be changed with the UP and DOWN keys. The spaceship controls are WASD and UP, DOWN, LEFT, RIGHT. Press SPACE to attack. 
+The enemy spaceship pattern can be changed with the UP and DOWN keys. The spaceship controls are WASD and UP, DOWN, LEFT,and RIGHT. SPACE to attack. 
 
 ![space](https://github.com/sheraadams/Space-Shooter-Game/assets/110789514/6f4bbc16-0267-4eed-a0c6-b9ca179797bc)
 
